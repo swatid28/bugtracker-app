@@ -1,0 +1,34 @@
+h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+
+ .bugname, .stats{
+        font-size: 20pt;
+    }
+    section{
+        margin-bottom: 10px;
+    }
+    .closed{
+        color : red;
+        text-decoration: line-through;
+        font-style: italic;
+        font-weight: bold;
+    }
+    li span{
+        cursor: pointer;
+    }
+    ol{
+        width: 500px;
+        list-style: none;
+        -webkit-margin-before: 0px;
+
+    }
+    li{
+        margin-bottom: 10px;
+        padding: 4px;
+        border : 1px solid gray;
+        background-color: #e7e7e7;
+        border-radius: 5px;
+    }

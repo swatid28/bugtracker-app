@@ -1,0 +1,14 @@
+<hr>
+<section class="content">
+    <bug-stats [data]="bugs"></bug-stats>
+    <bug-sort (onSort)="onBugSort($event)"></bug-sort>
+    <bug-edit (onAdd)="addNew($event)"></bug-edit>
+    <section class="list">
+        <ol>
+            <li *ngFor="let bug of (bugs | sort:sortBugBy:sortBugOrder)">
+               <bug-item [data]="bug" (onToggle)="toggle($event)"></bug-item>
+            </li>
+        </ol>
+        <input type="button" value="Remove Closed" (click)="removeClosed()">
+    </section>
+</section>
