@@ -28,9 +28,21 @@ export class BugTracker implements OnInit{
         });
     }
 
+    // addNew(newBugName:string){
+    //    var newBug = this._bugStorage.addNew(newBugName)
+    //    this.bugs = this.bugs.concat([newBug]);
+    // }
+    // addNew(newBugName:string){
+    //     var self = this;
+    //     this._bugService.addNew(newBugName).subscribe(function(bug) {
+    //         console.log(self);
+    //         self.bugs = self.bugs.concat([bug]);
+    //     })
+    // }
     addNew(newBugName:string){
-        var newBug = this._bugStorage.addNew(newBugName)
-        this.bugs = this.bugs.concat([newBug]);
+        this._bugService.addNew(newBugName).subscribe(bug => {
+           this.bugs = this.bugs.concat([bug]);
+        })
     }
 
    toggle(bug:Bug){
